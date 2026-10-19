@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16734a">
+  <meta name="description" content="Portal Anggota untuk memeriksa status keanggotaan secara mudah.">
+  <title>Portal Anggota | Cek Status Keanggotaan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Portal Anggota - Beranda">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M20 3.5 35.5 12.25V27.75L20 36.5 4.5 27.75V12.25L20 3.5Z"
+                stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="m12.5 20 5 5 10-11"
+                stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">Portal <span>Anggota</span></span>
+    </a>
+
+    <div class="topbar-label">
+      <span class="status-dot"></span>
+      Layanan Informasi Anggota
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">
+        <span class="eyebrow-line"></span>
+        PORTAL INFORMASI KEANGGOTAAN
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1>Periksa Status<br><span>Keanggotaan Anda</span></h1>
+
+      <p class="intro">
+        Masukkan nama sesuai data keanggotaan untuk mengetahui
+        status Anda dengan mudah dan praktis.
+      </p>
+
+      <section class="search-card" aria-labelledby="form-title">
+        <div class="card-heading">
+          <div class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="10.8" cy="10.8" r="6.8"
+                      stroke="currentColor" stroke-width="1.8"/>
+              <path d="m16 16 4.2 4.2"
+                    stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h2 id="form-title">Cek Status Anggota</h2>
+            <p>Isi nama untuk memulai pemeriksaan.</p>
+          </div>
+        </div>
+
+        <form id="search-form">
+          <label for="member-name">Nama lengkap</label>
+
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5"
+                      stroke="currentColor" stroke-width="1.7"/>
+              <path d="M5 20c.5-3.6 3.1-5.5 7-5.5s6.5 1.9 7 5.5"
+                    stroke="currentColor" stroke-width="1.7"
+                    stroke-linecap="round"/>
+            </svg>
+
+            <input
+              type="text"
+              id="member-name"
+              name="nama"
+              placeholder="Masukkan nama lengkap"
+              autocomplete="name"
+              maxlength="100"
+              required
+            >
+
+            <button
+              type="button"
+              id="clear-button"
+              class="clear-button"
+              aria-label="Hapus nama"
+              hidden
+            >×</button>
+          </div>
+
+          <button type="submit" class="submit-button">
+            <span>Periksa Status</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6"
+                    stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+
+        <div
+          id="result"
+          class="result"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
+
+        <div class="privacy-note">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="5" y="10" width="14" height="11" rx="2"
+                  stroke="currentColor" stroke-width="1.7"/>
+            <path d="M8 10V7a4 4 0 0 1 8 0v3"
+                  stroke="currentColor" stroke-width="1.7"
+                  stroke-linecap="round"/>
+          </svg>
+          <span>Gunakan nama sesuai data yang terdaftar.</span>
+        </div>
+      </section>
+
+      <div class="demo-note">
+        <span class="demo-badge">INFO</span>
+        <p>
+          Hasil pemeriksaan mengikuti data yang tersedia pada sistem.
+          Jika terdapat ketidaksesuaian, silakan hubungi pengelola.
+        </p>
+      </div>
+    </section>
+
+    <section class="steps" aria-label="Cara menggunakan portal">
+      <article class="step">
+        <span class="step-number">01</span>
+        <div>
+          <h3>Masukkan Nama</h3>
+          <p>Ketik nama lengkap sesuai data keanggotaan.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <span class="step-number">02</span>
+        <div>
+          <h3>Periksa Data</h3>
+          <p>Tekan tombol periksa untuk mencari data.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <span class="step-number">03</span>
+        <div>
+          <h3>Lihat Hasil</h3>
+          <p>Baca informasi status yang ditampilkan.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Portal Anggota</span>
+    <span>Layanan Informasi Keanggotaan</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
